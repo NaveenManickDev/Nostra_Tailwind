@@ -7,9 +7,7 @@
 .slider{
     overflow: hidden;
     display: flex;
-    width: 100%;
-    position: relative;
-    
+    position: relative;    
     border-radius: 5px;
 
 }
@@ -19,6 +17,7 @@
 }
 .slider-image{
     width: 100vw;
+    height: 35vw;
 }
 .slider-left-button{
     position: absolute;
