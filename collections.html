@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!-- Link my Style sheet -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Link Fontawasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Link Tailwind Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body>
+    <div class="p-3 flex gap-4 bg-black text-white justify-center">
+        <p class="p-2">Sign Up and GET 20% for Your first Order</p>
+        <p class="p-2 cursor-pointer">X</p>
+    </div>
+    <!-- Responsive Navbar -->
+    <nav class="p-3 flex items-center justify-between">
+        <h1 class="text-3xl font-bold">Nostra</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class="flex gap-5 hidden md:flex gap-0 lg:gap-32">
+            <li>
+                <a class="hover:underline" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#new_arrival">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#most_wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="justify-center">
+
+        <!-- News  -->
+        <section class="flex flex-col p-20">
+            <h1 class="text-center text-4xl font-bold mb-4">Join our News Letter</h1>
+            <p class="text-center text-3xl font-medium mb-4">Signup for our email newspaper to get exclusive discounts,
+                updates, and more
+            </p>
+            <input class="border-2 border-black m-4 p-2" type="text">
+            <div class="flex justify-center">
+                <button class="bg-black text-white py-4 px-10 text-2xl font-bold rounded rounded-2xl"> Subscribe <i
+                        class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+
+    </div>
+    <!-- Footer Section -->
+
+    <footer class="bg-gray-800 text-white p-10">
+        <h1 class="text-5xl font-bold mb-4">Nostra</h1>
+        <p class="text-3xl">The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those
+            interest</p>
+        <div class="flex gap-10 mt-4 text-3xl p-8">
+            <i class="icon fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="icon fa-brands fa-twitter" style="color: #ffffff;"></i>
+            <i class="icon fa-brands fa-facebook" style="color: #ffffff;"></i>
+        </div>
+        <p class="text-2xl">@ 2023 Nostra.com</p>
+    </footer>
+    <script></script>
+</body>
+
+</html>
