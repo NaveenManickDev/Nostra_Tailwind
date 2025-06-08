@@ -193,53 +193,75 @@
         <section class="p-4">
             <h1 id="most_wanted" class="font-bold text-2xl">Most Wanted</h1>
 
-            <div class="grid grid-cols-4  gap-10">
-                <div class="p-2  relative inline-block">
-                    <img src="./Images/products/n1.jpg" alt="">
+            <div class="grid grid-cols-4 gap-10">
 
+                <div class="p-2 relative">
+                    <img src="./Images/products/n1.jpg" alt="" class="w-full h-auto">
+                    <p class="absolute top-2 left-2 bg-red-500 w-fit px-2 py-1 text-white rounded text-3xl">
+                        Sale
+                    </p>
+                    <img id="pick" onclick="btnclick()" src="./Images/brands/blackheart.png" alt=""
+                        class="absolute bottom-14 right-14 w-12 h-12 cursor-pointer" />
                 </div>
-                <div class="p-2  relative inline-block">
-                    <img src="./Images/products/n2.jpg" class="relative" alt="">
 
+
+                <div class="p-2 relative">
+                    <img src="./Images/products/n2.jpg" alt="" class="w-full h-auto">
+                    <p class="absolute top-2 left-2 bg-red-500 w-fit px-2 py-1 text-white rounded text-3xl">
+                        Sale
+                    </p>
+                    <img src="./Images/brands/blackheart.png" alt="" class="absolute bottom-14 right-14 w-12 h-12" />
                 </div>
-                <div class="p-2  relative inline-block">
-                    <img src="./Images/products/n3.jpg" class="relative" alt="">
 
+
+                <div class="p-2 relative">
+                    <img src="./Images/products/n3.jpg" alt="" class="w-full h-auto">
+                    <p class="absolute top-2 left-2 bg-red-500 w-fit px-2 py-1 text-white rounded text-3xl">
+                        Sale
+                    </p>
+                    <img src="./Images/brands/blackheart.png" alt="" class="absolute bottom-14 right-14 w-12 h-12" />
                 </div>
-                <div class="p-2  relative inline-block">
-                    <img src="./Images/products/n4.jpg" class="relative" alt="">
 
+
+                <div class="p-2 relative">
+                    <img src="./Images/products/n4.jpg" alt="" class="w-full h-auto">
+                    <p class="absolute top-2 left-2 bg-red-500 w-fit px-2 py-1 text-white rounded text-3xl">
+                        Sale
+                    </p>
+                    <img src="./Images/brands/blackheart.png" alt="" class="absolute bottom-14 right-14 w-12 h-12" />
                 </div>
             </div>
-        </section>
 
-        <!-- Limited Offers -->
-        <section class="bg-gray-800 flex justify-around py-10">
-            <div>
-                <img src="./Images/slider/offer.jpg" alt="">
-            </div>
-            <div class="flex flex-col justify-center">
-                <h1 class="text-white text-7xl font-bold mb-5">Limited Offer</h1>
-                <p class="text-white text-5xl">35% OFF on this for the first 30 Customers</p>
-                <button class="px-4 py-2 bg-white rounded-2xl text-2xl mt-10"> Shop Now <i
-                        class="fa-solid fa-arrow-right"></i> </button>
-            </div>
-        </section>
+    </div>
+    </section>
+
+    <!-- Limited Offers -->
+    <section class="bg-gray-800 flex justify-around py-10">
+        <div>
+            <img src="./Images/slider/offer.jpg" alt="">
+        </div>
+        <div class="flex flex-col justify-center">
+            <h1 class="text-white text-7xl font-bold mb-5">Limited Offer</h1>
+            <p class="text-white text-5xl">35% OFF on this for the first 30 Customers</p>
+            <button class="px-4 py-2 bg-white rounded-2xl text-2xl mt-10"> Shop Now <i
+                    class="fa-solid fa-arrow-right"></i> </button>
+        </div>
+    </section>
 
 
-        <!-- News  -->
-        <section class="flex flex-col p-20">
-            <h1 class="text-center text-4xl font-bold mb-4">Join our News Letter</h1>
-            <p class="text-center text-3xl font-medium mb-4">Signup for our email newspaper to get exclusive discounts,
-                updates, and more
-            </p>
-            <input class="border-2 border-black m-4 p-2" type="text">
-            <div class="flex justify-center">
-                <button class="bg-black text-white py-4 px-10 text-2xl font-bold rounded rounded-2xl"> Subscribe <i
-                        class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-        </section>
+    <!-- News  -->
+    <section class="flex flex-col p-20">
+        <h1 class="text-center text-4xl font-bold mb-4">Join our News Letter</h1>
+        <p class="text-center text-3xl font-medium mb-4">Signup for our email newspaper to get exclusive discounts,
+            updates, and more
+        </p>
+        <input class="border-2 border-black m-4 p-2" type="text">
+        <div class="flex justify-center">
+            <button class="bg-black text-white py-4 px-10 text-2xl font-bold rounded rounded-2xl"> Subscribe <i
+                    class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
 
     </div>
     <!-- Footer Section -->
@@ -255,7 +277,15 @@
         </div>
         <p class="text-2xl">@ 2025 Nostra.com</p>
     </footer>
-    <script></script>
+    <script>
+        let pick = document.getElementById("pick")
+
+        function btnclick() {
+            console.log("Button Clicked");
+            pick.style.backgroundColor = "red"
+
+        }
+    </script>
 </body>
 
 </html>
