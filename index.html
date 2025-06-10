@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="p-3 flex gap-4 bg-black text-white justify-center">
+    <div class="p-3 flex gap-4 bg-black text-white justify-center " id="pop">
         <p class="p-2">Sign Up and GET 20% for Your first Order</p>
-        <p class="p-2 cursor-pointer">X</p>
+        <p class="p-2 cursor-pointer" id="close">X</p>
     </div>
     <!-- Responsive Navbar -->
     <nav class="p-3 flex items-center justify-between">
@@ -72,34 +72,31 @@
         <div>
             <p class="p-2 text-2xl font-bold mb-5 mt-6">Brands</p>
             <div class="brands flex justify-between m-4">
-                <div class="p-2">
-                    <img class="  w-20 rounded-2xl" src="./Images/brands/puma.png" alt="">
-                    <p class="text-3xl ">Puma</p>
+                <div class="p-2" style="width: 10%;">
+                    <img class="  w-20 " style="width: 100%;" src="./Images/brands/puma.png" alt="">
+                    <p class="text-3xl">Puma</p>
                 </div>
-                <div class="p-2">
-                    <img class=" w-20 rounded-2xl" src="./Images/brands/adidas.png" alt="">
+                <div class="p-2" style="width: 10%;">
+                    <img class=" w-20 " style="width: 100%;" src="./Images/brands/adidas.png" alt="">
                     <p class="text-3xl ">Adidas</p>
                 </div>
-                <div class="p-2">
-                    <img class=" w-20 rounded-2xl" src="./Images/brands/simple.png" alt="">
+                <div class="p-2" style="width: 10%;">
+                    <img class=" w-20 " style="width: 100%;" src="./Images/brands/simple.png" alt="">
                     <p class="text-3xl ">Simple</p>
                 </div>
-                <div class="p-2">
-                    <img class=" w-20 rounded-2xl" src="./Images/brands/leaves.png" alt="">
+                <div class="p-2" style="width: 10%;">
+                    <img class=" w-20 " style="width: 100%;" src="./Images/brands/leaves.png" alt="">
                     <p class="text-3xl ">Leaves</p>
                 </div>
-                <div class="p-2">
-                    <img class=" w-20 rounded-2xl" src="./Images/brands/behance.png" alt="">
+                <div class="p-2" style="width: 10%;">
+                    <img class=" w-20 " style="width: 100%;" src="./Images/brands/behance.png" alt="">
                     <p class="text-3xl ">behance</p>
                 </div>
-                <div class="p-2">
-                    <img class=" w-20 rounded-2xl" src="./Images/brands/twitch.png" alt="">
+                <div class="p-2" style="width: 10%;">
+                    <img class=" w-20 " style="width: 100%;" src="./Images/brands/twitch.png" alt="">
                     <p class="text-3xl ">Twitch</p>
                 </div>
-                <div class="p-2">
-                    <img class=" w-20 rounded-2xl" src="./Images/brands/puma.png" alt="">
-                    <p class="text-3xl ">Puma</p>
-                </div>
+
             </div>
 
 
@@ -278,6 +275,25 @@
         <p class="text-2xl">@ 2025 Nostra.com</p>
     </footer>
     <script>
+        //Close button
+
+        // function btnClose() {
+        //     console.log("Button Closed");
+
+        // }
+
+        // Selecting
+
+        let close = document.getElementById("close")
+        let pop = document.getElementById("pop")
+
+
+        close.addEventListener("click", function () {
+            pop.style.display = "none"
+        })
+
+
+
         let pick = document.getElementById("pick")
 
         function btnclick() {
