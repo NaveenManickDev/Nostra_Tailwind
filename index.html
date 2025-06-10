@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="p-3 flex gap-4 bg-black text-white justify-center " id="pop">
+    <div id="pop" class="p-3 flex gap-4 bg-black text-white justify-center">
         <p class="p-2">Sign Up and GET 20% for Your first Order</p>
-        <p class="p-2 cursor-pointer" id="close">X</p>
+        <p id="close" class="p-2 cursor-pointer">X</p>
     </div>
     <!-- Responsive Navbar -->
     <nav class="p-3 flex items-center justify-between">
@@ -275,18 +275,12 @@
         <p class="text-2xl">@ 2025 Nostra.com</p>
     </footer>
     <script>
-        //Close button
-
-        // function btnClose() {
-        //     console.log("Button Closed");
-
-        // }
-
         // Selecting
 
-        let close = document.getElementById("close")
         let pop = document.getElementById("pop")
+        let close = document.getElementById("close")
 
+        // close function
 
         close.addEventListener("click", function () {
             pop.style.display = "none"
