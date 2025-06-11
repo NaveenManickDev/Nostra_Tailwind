@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Link Tailwind Css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .grid_container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto;
+
+        }
+
+        .grid_item {
+            border-right: solid black 2px;
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .grid_item label {
+            font-size: 36px;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +48,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
-        <ul class="flex gap-5 hidden md:flex gap-0 lg:gap-32">
+        <ul class="flex  px-14 hidden md:flex gap-0 lg:gap-32">
             <li>
                 <a class="hover:underline" href="./index.html">Home</a>
             </li>
@@ -44,6 +66,92 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Collections Section -->
+
+    <section class="grid_container">
+
+        <div class="grid_item">
+            <div class="mb-10">
+                <h1 class="title">Occasion</h1>
+                <input type="checkbox" name="check" value="Summer"> <label for="">Summer</label> <br>
+                <input type="checkbox" name="check" value="Party"> <label for="">Party</label> <br>
+                <input type="checkbox" name="check" value="Beach"> <label for="">Beach</label>
+            </div>
+            <div class="mb-10">
+                <h1 class="title">Colors</h1>
+                <input type="checkbox" name="check" value="Red"> <label for="">Red</label> <br>
+                <input type="checkbox" name="check" value="Blue"> <label for="">Blue</label> <br>
+                <input type="checkbox" name="check" value="White"> <label for="">White</label> <br>
+                <input type="checkbox" name="check" value="Green"> <label for="">Green</label>
+            </div>
+            <div class="mb-10">
+                <h1 class="title">Arrivals</h1>
+                <input type="checkbox" name="check" value="New"> <label for="">New</label> <br>
+                <input type="checkbox" name="check" value="Old"> <label for="">Old</label>
+            </div>
+        </div>
+
+
+        <div class="grid_item" style="border: none;">
+            <div class="border border-black rounded p-1 flex items-center mb-10" style="width: 96%;">
+                <input placeholder="Search" style="width: 100%; " type="text"><i
+                    class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="flex gap-10 justify-between flex-wrap">
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Floral Summer Shirt</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Summer Green</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Party Floral Shirt</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Floral Summer Shirt</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Summer Green</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Party Floral Shirt</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Floral Summer Shirt</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Summer Green</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+                <div style="width: 400px;">
+                    <img src="./Images/products/f2.jpg" alt="">
+                    <h1 class="text-4xl font-bold">Party Floral Shirt</h1>
+                    <p class="text-lg">₹220</p>
+                </div>
+            </div>
+
+            <h1 id="result" style="color: red; font-size: 36px ;"></h1>
+        </div>
+
+    </section>
+
     <div class="justify-center">
 
         <!-- News  -->
@@ -75,7 +183,29 @@
         </div>
         <p class="text-2xl">@ 2025 Nostra.com</p>
     </footer>
-    <script></script>
+    <script>
+        let check = document.getElementsByName("check")
+        let result = document.getElementById("result")
+        skill = []
+
+        for (count = 0; count < check.length; count = count + 1) {
+
+            check[count].addEventListener("click", function () {
+                if (event.target.checked) {
+                    console.log("Checked");
+                    skill.push(event.target.value)
+                    result.textContent = skill
+                }
+                else {
+                    console.log("Unchecked");
+                    //Fine index: Skill = ["Summer","Party","Beach"]
+                    var index = skill.indexOf(event.target.value) //0
+                    skill.splice(index, 1)
+                    result.textContent = skill
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
