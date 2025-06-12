@@ -18,6 +18,8 @@
 .slider-image{
     width: 100vw;
     height: 35vw;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
 }
 .slider-left-button{
     position: absolute;
