@@ -37,10 +37,10 @@
                 <a class="hover:underline" href="#most_wanted">Most Wanted</a>
             </li>
             <li>
-                <a class="hover:underline" href="#">Collections</a>
+                <a class="hover:underline" href="./collections.html">Collections</a>
             </li>
             <li>
-                <a class="hover:underline" href="#">Contact Us</a>
+                <a class="hover:underline" href="./contact.html">Contact Us</a>
             </li>
         </ul>
     </nav>
@@ -84,72 +84,71 @@
         </section>
 
         <!-- Limited Offers -->
-        <section class="bg-gray-800 flex justify-around py-10">
-            <div>
-                <img src="./Images/slider/offer.jpg" alt="">
+        <section
+            class="bg-gray-800 flex flex-col lg:flex-row justify-around items-center py-10 px-4 space-y-6 lg:space-y-0">
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <img src="./Images/slider/offer.jpg" alt="" class="w-full max-w-md rounded-xl">
             </div>
-            <div class="flex flex-col justify-center">
-                <h1 class="text-white text-7xl font-bold mb-5">Limited Offer</h1>
-                <p class="text-white text-5xl">35% OFF on this for the first 30 Customers</p>
-                <button class="px-4 py-2 bg-white rounded-2xl text-2xl mt-10"> Shop Now <i
-                        class="fa-solid fa-arrow-right"></i> </button>
-            </div>
-        </section>
-
-
-        <!-- News  -->
-        <section class="flex flex-col p-20">
-            <h1 class="text-center text-4xl font-bold mb-4">Join our News Letter</h1>
-            <p class="text-center text-3xl font-medium mb-4">Signup for our email newspaper to get exclusive discounts,
-                updates, and more
-            </p>
-            <input class="border-2 border-black m-4 p-2" type="text">
-            <div class="flex justify-center">
-                <button class="bg-black text-white py-4 px-10 text-2xl font-bold rounded rounded-2xl"> Subscribe <i
-                        class="fa-solid fa-arrow-right"></i>
+            <div
+                class="w-full lg:w-1/2 flex flex-col justify-center items-center text-center lg:text-left lg:items-start">
+                <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-5">Limited Offer</h1>
+                <p class="text-white text-2xl md:text-3xl lg:text-5xl">35% OFF for the first 30 Customers</p>
+                <button class="px-6 py-3 bg-white rounded-2xl text-xl md:text-2xl mt-8">
+                    Shop Now <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
         </section>
 
+        <!-- News -->
+        <section class="flex flex-col items-center px-4 py-20 bg-gray-100">
+            <h1 class="text-center text-3xl md:text-4xl font-bold mb-4">Join our News Letter</h1>
+            <p class="text-center text-xl md:text-2xl font-medium mb-4 max-w-2xl">
+                Signup for our email newsletter to get exclusive discounts, updates, and more.
+            </p>
+            <input class="border-2 border-black m-4 p-3 w-full max-w-md rounded-md" type="text"
+                placeholder="Enter your email" />
+            <button class="bg-black text-white py-3 px-8 text-lg md:text-2xl font-bold rounded-2xl mt-2">
+                Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </section>
 
-    </div>
-    <!-- Footer Section -->
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-white p-10 text-center lg:text-left">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Nostra</h1>
+            <p class="text-lg md:text-2xl mb-6">
+                The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.
+            </p>
+            <div class="flex justify-center lg:justify-start gap-6 text-2xl mb-6">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <p class="text-sm md:text-xl">@ 2025 Nostra.com</p>
+        </footer>
+        <script>
 
-    <footer class="bg-gray-800 text-white p-10">
-        <h1 class="text-5xl font-bold mb-4">Nostra</h1>
-        <p class="text-3xl">The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those
-            interest</p>
-        <div class="flex gap-10 mt-4 text-3xl p-8">
-            <i class="icon fa-brands fa-instagram" style="color: #ffffff;"></i>
-            <i class="icon fa-brands fa-twitter" style="color: #ffffff;"></i>
-            <i class="icon fa-brands fa-facebook" style="color: #ffffff;"></i>
-        </div>
-        <p class="text-2xl">@ 2025 Nostra.com</p>
-    </footer>
-    <script>
+            // Selecting
 
-        // Selecting
+            let pop = document.getElementById("pop")
+            let close = document.getElementById("close")
 
-        let pop = document.getElementById("pop")
-        let close = document.getElementById("close")
+            // close function
 
-        // close function
-
-        close.addEventListener("click", function () {
-            pop.style.display = "none"
-        })
-
+            close.addEventListener("click", function () {
+                pop.style.display = "none"
+            })
 
 
-        let pick = document.getElementById("pick")
 
-        function btnclick() {
-            console.log("Button Clicked");
-            pick.style.backgroundColor = "red"
+            let pick = document.getElementById("pick")
 
-        }
+            function btnclick() {
+                console.log("Button Clicked");
+                pick.style.backgroundColor = "red"
 
-    </script>
+            }
+
+        </script>
 </body>
 
 </html>
