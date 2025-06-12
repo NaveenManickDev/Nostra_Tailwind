@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="p-3 flex gap-4 bg-black text-white justify-center">
+    <div id="pop" class="p-3 flex gap-4 bg-black text-white justify-center">
         <p class="p-2">Sign Up and GET 20% for Your first Order</p>
-        <p class="p-2 cursor-pointer">X</p>
+        <p id="close" class="p-2 cursor-pointer">X</p>
     </div>
     <!-- Responsive Navbar -->
     <nav class="p-3 flex items-center justify-between">
@@ -126,7 +126,30 @@
         </div>
         <p class="text-2xl">@ 2025 Nostra.com</p>
     </footer>
-    <script></script>
+    <script>
+
+        // Selecting
+
+        let pop = document.getElementById("pop")
+        let close = document.getElementById("close")
+
+        // close function
+
+        close.addEventListener("click", function () {
+            pop.style.display = "none"
+        })
+
+
+
+        let pick = document.getElementById("pick")
+
+        function btnclick() {
+            console.log("Button Clicked");
+            pick.style.backgroundColor = "red"
+
+        }
+
+    </script>
 </body>
 
 </html>
