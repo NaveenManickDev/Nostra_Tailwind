@@ -14,15 +14,16 @@
 </head>
 
 <body>
+
+    <!-- Responsive Navbar -->
     <div id="pop" class="p-3 flex gap-4 bg-black text-white justify-center">
         <p class="p-2">Sign Up and GET 20% for Your first Order</p>
         <p id="close" class="p-2 cursor-pointer">X</p>
     </div>
-    <!-- Responsive Navbar -->
     <nav class="p-3 flex items-center justify-between">
         <h1 class="text-3xl font-bold">Nostra</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -44,6 +45,35 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Side Navbar -->
+
+    <section id="sidenav" class="bg-black text-white z-20 top-0 transition-all duration-1000 fixed"
+        style="height: 100vh; width: 50%; left: -50%;">
+
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center gap-0 lg:gap-32">
+            <li>
+                <a class="hover:underline" href="#">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#new_arrival">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="#most_wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./collections.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+
     <div class="justify-center">
         <!--Slider-->
         <div class="slider m-4">
@@ -594,6 +624,23 @@
             // Initialize the slider
             updateSlider();
         });
+
+        //Side Navbar Functionality
+
+        //Selecting sidenavbar, menuicon
+
+        let sidenav = document.getElementById("sidenav")
+        let menuicon = document.getElementById("menuicon")
+
+        let closenav = document.getElementById("closenav")
+
+        menuicon.addEventListener("click", function () {
+            sidenav.style.left = 0
+        })
+
+        closenav.addEventListener("click", function () {
+            sidenav.style.left = "-50%"
+        })
     </script>
 </body>
 
