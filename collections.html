@@ -93,7 +93,7 @@
         </div>
 
 
-        <div class="grid_item" style="border: none;">
+        <!-- <div class="grid_item" style="border: none;">
             <div class="border border-black rounded p-1 flex items-center mb-10" style="width: 96%;">
                 <input placeholder="Search" style="width: 100%; " type="text"><i
                     class="fa-solid fa-magnifying-glass"></i>
@@ -148,6 +148,77 @@
             </div>
 
             <h1 id="result" style="color: red; font-size: 36px ;"></h1>
+        </div> -->
+
+        <div class="p-4">
+            <!-- Search Bar -->
+            <div class="border border-black rounded p-2 flex items-center mb-10 w-full max-w-4xl mx-auto">
+                <input id="search" type="text" placeholder="Search" class="w-full outline-none text-lg px-2" />
+                <i class="fa-solid fa-magnifying-glass ml-2 text-gray-600"></i>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="collection-container"
+                class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <!-- Product Card -->
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Floral Summer Shirt</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Summer Green</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Party Floral Shirt</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <!-- Duplicate for rest of the products -->
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Floral Summer Shirt</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Summer Green</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Party Floral Shirt</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Floral Summer Shirt</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Summer Green</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                    <h1 class="text-xl font-bold mt-2">Party Floral Shirt</h1>
+                    <p class="text-base text-gray-700">₹220</p>
+                </div>
+            </div>
+
+            <!-- Result Message -->
+            <h1 id="result" class="text-red-600 text-3xl text-center mt-10"></h1>
         </div>
 
     </section>
@@ -201,7 +272,7 @@
 
         }
 
-        //Hear functionality
+        //Heart functionality
 
         let check = document.getElementsByName("check")
         let result = document.getElementById("result")
@@ -224,6 +295,30 @@
                 }
             })
         }
+
+        //Collections Search Functionality 
+
+        let collectionContainer = document.getElementById("collection-container")
+        let search = document.getElementById("search")
+
+        let collectionList = collectionContainer.querySelectorAll("div")
+
+        // console.log(collectionList);
+
+        search.addEventListener("keyup", function () {
+            let enteredValue = event.target.value.toUpperCase()
+
+            for (count = 0; count < collectionList.length; count = count + 1) {
+                if (collectionList[count].textContent.toUpperCase().indexOf(enteredValue) < 0) {
+                    collectionList[count].style.display = "none"
+                }
+                else {
+                    collectionList[count].style.display = "block"
+                }
+
+            }
+        })
+
     </script>
 </body>
 
