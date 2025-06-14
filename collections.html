@@ -99,86 +99,38 @@
 
     <section class="grid_container">
 
+        <!-- Sidebar Filters -->
         <div class="grid_item">
             <div class="mb-10">
                 <h1 class="title">Occasion</h1>
-                <input type="checkbox" name="check" value="Summer"> <label for="">Summer</label> <br>
-                <input type="checkbox" name="check" value="Party"> <label for="">Party</label> <br>
-                <input type="checkbox" name="check" value="Beach"> <label for="">Beach</label>
+                <input type="checkbox" class="filter-checkbox" data-filter="occasion" value="Summer">
+                <label>Summer</label><br>
+                <input type="checkbox" class="filter-checkbox" data-filter="occasion" value="Party">
+                <label>Party</label><br>
+                <input type="checkbox" class="filter-checkbox" data-filter="occasion" value="Beach">
+                <label>Beach</label>
             </div>
             <div class="mb-10">
                 <h1 class="title">Colors</h1>
-                <input type="checkbox" name="check" value="Red"> <label for="">Red</label> <br>
-                <input type="checkbox" name="check" value="Blue"> <label for="">Blue</label> <br>
-                <input type="checkbox" name="check" value="White"> <label for="">White</label> <br>
-                <input type="checkbox" name="check" value="Green"> <label for="">Green</label>
+                <input type="checkbox" class="filter-checkbox" data-filter="color" value="Red">
+                <label>Red</label><br>
+                <input type="checkbox" class="filter-checkbox" data-filter="color" value="Blue">
+                <label>Blue</label><br>
+                <input type="checkbox" class="filter-checkbox" data-filter="color" value="White">
+                <label>White</label><br>
+                <input type="checkbox" class="filter-checkbox" data-filter="color" value="Green">
+                <label>Green</label>
             </div>
             <div class="mb-10">
                 <h1 class="title">Arrivals</h1>
-                <input type="checkbox" name="check" value="New"> <label for="">New</label> <br>
-                <input type="checkbox" name="check" value="Old"> <label for="">Old</label>
+                <input type="checkbox" class="filter-checkbox" data-filter="arrival" value="New">
+                <label>New</label><br>
+                <input type="checkbox" class="filter-checkbox" data-filter="arrival" value="Old"> <label>Old</label>
             </div>
         </div>
 
-
-        <!-- <div class="grid_item" style="border: none;">
-            <div class="border border-black rounded p-1 flex items-center mb-10" style="width: 96%;">
-                <input placeholder="Search" style="width: 100%; " type="text"><i
-                    class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <div class="flex gap-10 justify-between flex-wrap">
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Floral Summer Shirt</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Summer Green</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Party Floral Shirt</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Floral Summer Shirt</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Summer Green</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Party Floral Shirt</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Floral Summer Shirt</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Summer Green</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-                <div style="width: 400px;">
-                    <img src="./Images/products/f2.jpg" alt="">
-                    <h1 class="text-4xl font-bold">Party Floral Shirt</h1>
-                    <p class="text-lg">₹220</p>
-                </div>
-            </div>
-
-            <h1 id="result" style="color: red; font-size: 36px ;"></h1>
-        </div> -->
-
-        <div class="p-4">
+        <!-- Product Section -->
+        <div class="p-4 w-full">
             <!-- Search Bar -->
             <div class="border border-black rounded p-2 flex items-center mb-10 w-full max-w-4xl mx-auto">
                 <input id="search" type="text" placeholder="Search" class="w-full outline-none text-lg px-2" />
@@ -188,66 +140,63 @@
             <!-- Product Grid -->
             <div id="collection-container"
                 class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                <!-- Product Card -->
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f1.jpg" alt="" class="w-full h-auto rounded" />
+
+                <div class="product-card" data-occasion="Summer" data-color="White" data-arrival="New">
+                    <img src="./Images/products/f1.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Floral Summer Shirt</h1>
                     <p class="text-base text-gray-700">₹220</p>
                 </div>
 
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f2.jpg" alt="" class="w-full h-auto rounded" />
+                <div class="product-card" data-occasion="Summer" data-color="Green" data-arrival="Old">
+                    <img src="./Images/products/f2.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Summer Green</h1>
                     <p class="text-base text-gray-700">₹260</p>
                 </div>
 
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f3.jpg" alt="" class="w-full h-auto rounded" />
+                <div class="product-card" data-occasion="Party" data-color="Blue" data-arrival="New">
+                    <img src="./Images/products/f3.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Party Floral Shirt</h1>
                     <p class="text-base text-gray-700">₹399</p>
                 </div>
 
-                <!-- Duplicate for rest of the products -->
-
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f4.jpg" alt="" class="w-full h-auto rounded" />
+                <div class="product-card" data-occasion="Beach" data-color="White" data-arrival="New">
+                    <img src="./Images/products/f4.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Beach Shirt</h1>
                     <p class="text-base text-gray-700">₹579</p>
                 </div>
 
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f5.jpg" alt="" class="w-full h-auto rounded" />
+                <div class="product-card" data-occasion="Party" data-color="Red" data-arrival="Old">
+                    <img src="./Images/products/f5.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Shirt Party Red</h1>
                     <p class="text-base text-gray-700">₹579</p>
                 </div>
 
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f6.jpg" alt="" class="w-full h-auto rounded" />
+                <div class="product-card" data-occasion="Party" data-color="Blue" data-arrival="New">
+                    <img src="./Images/products/f6.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Party Floral Shirt</h1>
                     <p class="text-base text-gray-700">₹220</p>
                 </div>
 
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f7.jpg" alt="" class="w-full h-auto rounded" />
+                <div class="product-card" data-occasion="Party" data-color="Red" data-arrival="Old">
+                    <img src="./Images/products/f7.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Party Floral Shirt</h1>
                     <p class="text-base text-gray-700">₹399</p>
                 </div>
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f8.jpg" alt="" class="w-full h-auto rounded" />
+
+                <div class="product-card" data-occasion="Party" data-color="Red" data-arrival="New">
+                    <img src="./Images/products/f8.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Shirt Party Red</h1>
                     <p class="text-base text-gray-700">₹299</p>
                 </div>
-                <div class="w-full max-w-sm mx-auto">
-                    <img src="./Images/products/f1.jpg" alt="" class="w-full h-auto rounded" />
+
+                <div class="product-card" data-occasion="Summer" data-color="Green" data-arrival="Old">
+                    <img src="./Images/products/f1.jpg" class="w-full h-auto rounded" />
                     <h1 class="text-xl font-bold mt-2">Floral Summer Shirt</h1>
                     <p class="text-base text-gray-700">₹499</p>
                 </div>
-            </div>
-            <h1 id="result">Rsult</h1>
-            <!-- Result Message -->
-            <h1 id="result" class="text-red-600 text-3xl text-center mt-10"></h1>
-        </div>
 
+            </div>
+        </div>
     </section>
 
     <!-- News -->
@@ -297,29 +246,6 @@
 
         }
 
-        //Heart functionality
-
-        // let check = document.getElementsByName("check")
-        // let result = document.getElementById("result")
-        // skill = []
-
-        // for (count = 0; count < check.length; count = count + 1) {
-
-        //     check[count].addEventListener("click", function () {
-        //         if (event.target.checked) {
-        //             console.log("Checked");
-        //             skill.push(event.target.value)
-        //             result.textContent = skill
-        //         }
-        //         else {
-        //             console.log("Unchecked");
-        //             //Fine index: Skill = ["Summer","Party","Beach"]
-        //             var index = skill.indexOf(event.target.value) //0
-        //             skill.splice(index, 1)
-        //             result.textContent = skill
-        //         }
-        //     })
-        // }
 
         //Collections Search Functionality 
 
@@ -361,66 +287,46 @@
             sidenav.style.left = "-50%"
         })
 
-        //Filter Function
+        // Filter Functionality
 
-        // let check = document.getElementsByName("check")
-        // let result = document.getElementById("result")
-        // skill = []
+        const checkboxes = document.querySelectorAll(".filter-checkbox");
+        const productCards = document.querySelectorAll(".product-card");
 
-        // for (count = 0; count < check.length; count = count + 1) {
-        //     check[count].addEventListener("click", function () {
-        //         if (event.target.checked) {
-        //             console.log("Checked");
-        //             skill.push(event.target.value)
-        //             result.textContent = skill
-        //         }
-        //         else {
-        //             console.log("unchecked");
+        const filters = {
+            occasion: [],
+            color: [],
+            arrival: []
+        };
 
-        //             //Find index : skill["summer","party","beach"]
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", () => {
+                const type = checkbox.dataset.filter;
+                const value = checkbox.value;
 
-        //             let index = skill.indexOf(event.target.value)
-        //             skill.splice(index, 1)
-        //             result.textContent = skill
-        //         }
-        //     })
-        // }
-
-        let checkboxes = document.getElementsByName("check");
-        let result = document.getElementById("result");
-        let skill = [];
-        let products = document.querySelectorAll(".product");
-
-        checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener("change", function (event) {
-                let value = event.target.value;
-
-                if (event.target.checked) {
-                    if (!skill.includes(value)) {
-                        skill.push(value);
-                    }
+                if (checkbox.checked) {
+                    filters[type].push(value);
                 } else {
-                    let index = skill.indexOf(value);
-                    if (index > -1) {
-                        skill.splice(index, 1);
-                    }
+                    filters[type] = filters[type].filter(v => v !== value);
                 }
 
-                result.textContent = skill.join(", ");
-                filterProducts();
+                applyFilters();
             });
         });
 
-        function filterProducts() {
-            products.forEach(function (product) {
-                let tags = product.dataset.tags.toLowerCase(); // e.g., "red summer new"
-                let match = skill.every(filter => tags.includes(filter.toLowerCase()));
-                product.style.display = (match || skill.length === 0) ? "block" : "none";
+        function applyFilters() {
+            productCards.forEach(card => {
+                let show = true;
+
+                for (let key in filters) {
+                    if (filters[key].length > 0 && !filters[key].includes(card.dataset[key])) {
+                        show = false;
+                        break;
+                    }
+                }
+
+                card.style.display = show ? "block" : "none";
             });
         }
-
-
-
     </script>
 </body>
 
